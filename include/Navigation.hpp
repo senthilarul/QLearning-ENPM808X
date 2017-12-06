@@ -11,7 +11,9 @@ class Navigation {
     ros::Publisher velocity;
 
  public:
+    Navigation();
     void moveTurtleBot();
     void callEnvironment();
     void resetEnvironment();
+    ~Navigation();
 };
