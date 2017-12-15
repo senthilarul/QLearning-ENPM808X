@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="qlearning" name="qlearn" type="qlearn" />
+    <test pkg="qlearning" test-name="qTest" type="qTest" />
+</launch>
