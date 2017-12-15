@@ -118,7 +118,7 @@ include_directories(include ${catkin_INCLUDE_DIRS})
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
- add_executable(qlearn src/main.cpp src/Navigation.cpp)
+ add_executable(qlearn src/main.cpp src/Turtlebotstates.cpp src/Navigation.cpp src/Qlearning.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -180,3 +180,29 @@ target_link_libraries(qlearn ${catkin_LIBRARIES})
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
+
+if(CATKIN_ENABLE_TESTING)
+  find_package(rostest REQUIRED)
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -O0 --coverage")
+  add_rostest_gtest(
+  qTest
+  test/qlearntest.launch
+  test/main.cpp
+  test/NavigationTest.cpp
+  test/QlearningTest.cpp
+  test/TurtlebotstatesTest.cpp
+  src/Navigation.cpp
+  src/Qlearning.cpp
+  src/Turtlebotstates.cpp
+  )
+  target_link_libraries(
+  qTest
+  ${catkin_LIBRARIES}
+  )
+  add_dependencies(
+  qTest
+  qlearn
+  ${catkin_EXPORTED_TARGETS}
+  )
+endif()
