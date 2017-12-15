@@ -1,25 +1,30 @@
 #pragma once
 
-#include<iostream>
+#include <vector>
+#include <algorithm>
+#include <iostream>
+#include <array>
 
 class Qlearning {
  private:
-    double epsilon;
-    double alpha;
-    double gamma;
-    double qTable[1296][3];
-    std::vector<int> turtleState;
-    std::vector<int> turtleAction;
-    int reward;
-    std::vector<int> currentState;
-    std::vector<int> nextState;
-    int maxEpisodeCount;
-
+     double epsilon = 0.9;
+     double alpha = 0.2;
+     double gamma = 0.8;
+     double epsilonDiscount = 0.9986;
+     int totalEpisode = 5000;
+     // double qTable[1296][3];
+     std::vector <std::vector<double>> qTable;
+     // std::array<std::array<double, 3>, 1296> qTable;
  public:
-    void trainQ();
-    double* returnQ();
-    std::vector<int> chooseAction(std::vector<int> state);
-    void assignReward();
-    void updateQTable();
-    void runDemo();
+     Qlearning();
+     void learnQ(int state, int action, int reward, double val);
+     int chooseAction(int index);
+     void learn(int si, int act, int rew, int nsi);
+     double returnEpsilon() {return epsilon;}
+     void setEpsilon(double e) {epsilon = e; }
+     void storeQtable(std::string path);
+     void loadQtable(std::string path);
+     int demo(int index);
+     void testStoreQ();
 };
+
