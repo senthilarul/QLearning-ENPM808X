@@ -12,6 +12,20 @@ When a robot is in an unexplored environment, it does not know the set of best a
 
 This project will implement a Qlerning algorithm for training a turtlebot to navigate inside a maze (created on gazebo) by avoiding obstacles. The project will show working of the algorithm by using a demo that shows the turtlebot navigating inside the maze without colliding. 
 
+## Documents
+
+The presentation is available at
+https://docs.google.com/a/terpmail.umd.edu/presentation/d/1lY7BPjBClKzbS0OSACnfaRXx3JjSwh2sVAP6EU-dcpY/edit?usp=sharing
+
+Presentation:
+https://www.youtube.com/watch?v=k43GkDqWK9E
+
+Installation:
+https://youtu.be/rTx-yvGg248
+
+Demonstration video:
+https://www.youtube.com/watch?v=CnOc-quSAEc
+
 ## SIP
 
 The product backlog file can be view using the following link:
@@ -111,7 +125,11 @@ And created using C++ on a Ubuntu 16.04 LTS machine.
 More information to be added soon.
 
 ## Known Issues/bugs
-coming soon.
+As evident from the demo program, the maze requires the turtlebot to take only left turns. The sensor on board the turtlebot has a range of about 60 degrees. This software divides the laserscan range into 4 and uses it as the state for the Q-learning algorithm. Since the sensors visibility is towards the front the algorithm does not train well when trained in environments with both left and right turns. 
+This is not a deficiency in the algorithm but in the sensor. 
+A modification to a sensor with a higher angular range such as Hokuyo would solve the isse.
+
+Sometimes the path entry for qtable during the testing doesnt work. Please fill in the full path in the pragram (qlearning class->loadQtable function instead of path)
 
 
 
