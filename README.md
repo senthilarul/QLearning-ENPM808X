@@ -31,12 +31,13 @@ https://www.youtube.com/watch?v=CnOc-quSAEc
 
 ## SIP
 
-The product backlog file can be view using the following link:
+For public viewing without signing in:
+The product backlog file can be accessed at:
+https://docs.google.com/spreadsheets/d/1vrFUu7iHakTf7QKsV2FyB1mgLVpWevoV3XNpDwdl3Bk/edit?usp=sharing
 
-https://docs.google.com/a/terpmail.umd.edu/spreadsheets/d/1vrFUu7iHakTf7QKsV2FyB1mgLVpWevoV3XNpDwdl3Bk/edit?usp=sharing
-
-The Sprint planning and review document can be viewed using the following link:
-https://docs.google.com/a/terpmail.umd.edu/document/d/1hIBBBdsKGOwzNdXM68WiSKR9ENO5S5oQ6Tx5qm4As6w/edit?usp=sharing
+For public viewing without signing in:
+The Sprint planning and review document can be accessed at:
+https://docs.google.com/document/d/1hIBBBdsKGOwzNdXM68WiSKR9ENO5S5oQ6Tx5qm4As6w/edit?usp=sharing
 
 ## LICENSE
 
