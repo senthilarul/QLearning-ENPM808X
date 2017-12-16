@@ -56,9 +56,9 @@ class Turtlebotstates {
  private:
   // flag to indicate presence or absense of an obstacle
   bool collisionStatus = false;
-  //bool collision = false;
+  // bool collision = false;
   std::vector<int> laserState;
-  //Qlearning ql;
+  // Qlearning ql;
 
  public:
  /**

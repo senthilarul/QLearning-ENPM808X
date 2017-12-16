@@ -78,7 +78,7 @@ TEST(TESTDepthImage, checkObstacleDetection) {
     }
     bool col = false;
     int count = 0;
-    while(ros::ok()) {
+    while (ros::ok()) {
         pubScan.publish(laserData);
         if (depthData.collisionCheck()) {
             col = true;

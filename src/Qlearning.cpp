@@ -49,7 +49,6 @@
 #include <iostream>
 #include <sstream>
 #include "Qlearning.hpp"
-#include <ros/package.h>
 
 Qlearning::Qlearning() {
     for (int i = 0; i < 1296; i++) {
@@ -124,7 +123,7 @@ void Qlearning::learn(int si, int act, int rew, int nsi) {
 }
 
 void Qlearning::storeQtable(std::string path) {
-    //std::ofstream out("/home/viki/enpm808/src/QLearning-ENPM808X/qtable/test.csv");
+    // std::ofstream out("/home/viki/enpm808/src/QLearning-ENPM808X/qtable/test.csv");
     std::ofstream out(path);
     for (int i = 0; i < 1296; i++) {
         for (int j = 0; j < 3; j++)
@@ -139,10 +138,10 @@ void Qlearning::storeQtable(std::string path) {
 void Qlearning::loadQtable(std::string path) {
     std::vector<double> temp;
     std::vector<std::vector<double>> temp2;
-    //std::string path = ros::package::getPath("qlearning");
-    //std::ifstream file("/home/viki/enpm808/src/QLearning-ENPM808X/qtable/l259.csv");
+    // std::string path = ros::package::getPath("qlearning");
+    // std::ifstream file("/home/viki/enpm808/src/QLearning-ENPM808X/qtable/l259.csv");
     std::ifstream file(path);
-    //std::ifstream MyExcelFile ("l569.csv", ios::trunc);
+    // std::ifstream MyExcelFile ("l569.csv", ios::trunc);
     std::string row, cell;
 
     if (file.good()) {

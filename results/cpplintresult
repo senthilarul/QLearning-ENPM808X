@@ -1,0 +1,29 @@
+Done processing ./include/Turtlebotstates.hpp
+Done processing ./include/Qlearning.hpp
+./include/Navigation.hpp:137:  Is this a non-const reference? If so, make const or use a pointer: bool &colStat  [runtime/references] [2]
+./include/Navigation.hpp:137:  Is this a non-const reference? If so, make const or use a pointer: int &reward  [runtime/references] [2]
+./include/Navigation.hpp:137:  Is this a non-const reference? If so, make const or use a pointer: int &nextState  [runtime/references] [2]
+Done processing ./include/Navigation.hpp
+./src/Navigation.cpp:117:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+./src/Navigation.cpp:134:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+./src/Navigation.cpp:138:  Redundant blank line at the start of a code block should be deleted.  [whitespace/blank_line] [2]
+./src/Navigation.cpp:158:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+./src/Navigation.cpp:175:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+./src/Navigation.cpp:230:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+Done processing ./src/Navigation.cpp
+./src/Qlearning.cpp:84:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+./src/Qlearning.cpp:118:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+./src/Qlearning.cpp:126:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+./src/Qlearning.cpp:142:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+Done processing ./src/Qlearning.cpp
+./src/main.cpp:67:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+./src/main.cpp:70:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+./src/main.cpp:74:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+Done processing ./src/main.cpp
+Done processing ./src/Turtlebotstates.cpp
+Done processing ./test/QlearningTest.cpp
+Done processing ./test/main.cpp
+Done processing ./test/NavigationTest.cpp
+Done processing ./test/TurtlebotstatesTest.cpp
+Total errors found: 16
+

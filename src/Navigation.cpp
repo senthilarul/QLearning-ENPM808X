@@ -52,6 +52,8 @@ Navigation::Navigation() {
     msg.angular.z = 0.0;
     // publish velocity values for turtlebot
     velocity.publish(msg);
+    reward = 0;
+    collisionStat = false;
 }
 
 Navigation::~Navigation() {

@@ -82,7 +82,7 @@ TEST(TESTQlearning, testIntializationError) {
  */
 TEST(TESTQlearning, testloadQtable) {
     Qlearning q;
-    ASSERT_DEATH (q.loadQtable("random.csv"), "error");
+    ASSERT_DEATH(q.loadQtable("random.csv"), "error");
 }
 
 

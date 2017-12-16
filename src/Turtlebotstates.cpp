@@ -75,9 +75,6 @@ bool Turtlebotstates::collisionCheck() {
     return collisionStatus;
 }
 
-void Turtlebotstates::setCollision() { 
-    collisionStatus = false;
-}
 
 std::vector<int> Turtlebotstates::returnLaserState() {
     return laserState;
