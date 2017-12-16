@@ -4,6 +4,7 @@
         <arg name="world_file" value="$(find qlearning)/environment/god.world"/>
     </include>
 
+    <arg name = "rosbagEnable" default= "false" />
 
     <node
         pkg="qlearning"
@@ -12,6 +13,13 @@
         output="screen"
     />
 
+    <node
+        pkg="rosbag"
+        name="record"
+        type="record"
+        args="-a -x /camera/(.*) -O $(find qlearning)/results/roombatopics.bag"
+        if="$(arg rosbagEnable)"
+    />
 
 </launch>
 
