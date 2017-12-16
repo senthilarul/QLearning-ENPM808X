@@ -32,21 +32,22 @@
  */
 
 /**
- * @file    DepthImage.hpp
+ * @file    Turtlebotstates.hpp
  * @author  Senthil Hariharan Arul
  * @copyright 3-clause BSD
- * @brief DepthImage class declartion
- * Class to call laserscan image topic and check collision possibility.
+ * @brief Turtlebotstates class declartion
+ * Class to call laserscan image topic, check collision possibility and 
+ * converts laserdata to states.
  */
 
 #include <ros/ros.h>
 #include <geometry_msgs/Twist.h>
 #include <sensor_msgs/LaserScan.h>
 #include <vector>
-//#include "Qlearning.hpp"
+// #include "Qlearning.hpp"
 
 /**
- * @brief Class DepthImage
+ * @brief Class Turtlebotstates
  * The following class provides functions for read laserscan topic
  * and identifying possibility of turtlebot collision with environment.
 */
@@ -61,7 +62,7 @@ class Turtlebotstates {
 
  public:
  /**
-  * @brief constructor DepthImage
+  * @brief constructor Turtlebotstate
   * @param none
   * @return none
   * initializes values of collision status
@@ -69,7 +70,7 @@ class Turtlebotstates {
   Turtlebotstates();
 
  /**
-  * @brief destructor DepthImage
+  * @brief destructor Turtlebotstates
   * @param none
   * @return none
   * destroy the DepthImage object created
@@ -92,9 +93,20 @@ class Turtlebotstates {
   */
   bool collisionCheck();
 
+ /**
+  * @brief function setCollision
+  * @param none
+  * @return none
+  * sets values for collisionStat variable
+  */
   void setCollision();
 
-
+ /**
+  * @brief function returnLaserState
+  * @param none
+  * @return state as std::vector
+  * Return the current state of the turtlebot
+  */
   std::vector<int> returnLaserState();
 };
 

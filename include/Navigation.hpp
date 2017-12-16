@@ -50,7 +50,8 @@
 
 /**
  * @brief Class Navigation
- * class to publish velocity
+ * class to publish velocity, find states index and corrdinate other
+ * classes
  */
 class Navigation {
  private:
@@ -90,13 +91,80 @@ class Navigation {
     * and absence of obstacle.
     */
     void move();
+
+   /**
+    * @brief function navmain
+    * @param path std::string
+    * @return none
+    * coordinates the training process, gets states, gets action and performs
+    */
+
     void navmain(std::string path);
+   /**
+    * @brief function navmain2
+    * @param path std::string
+    * @return none
+    * runs the testing for trained qtable
+    */
+
     void navmain2(std::string path);
+   /**
+    * @brief function findstate
+    * @param state std::vector<int>
+    * @return stateIndex int
+    * finds the corresponding vector index for a state in the qTable
+    */
+
     int findStateIndex(std::vector<int> state);
+   /**
+    * @brief function envReset
+    * @param none
+    * @return none
+    * resets gazebo world
+    */
+
     void envReset();
+
+   /**
+    * @brief function action
+    * @param action int
+    * @param colStat bool reference
+    * @param reward int reference
+    * @param nextState int reference
+    * @return none
+    * publishes velocity based on the action
+    */
     void action(int action, bool &colStat, int &reward, int &nextState);
+
+   /**
+    * @brief function dempAction
+    * @param action int
+    * @return none
+    * publishes velocity based on qtable
+    */
     void demoAction(int action);
+
+   /**
+    * @brief function envPause
+    * @param none
+    * @return none
+    * calls gazebo pause_physics service
+    */
     void envPause();
+
+   /**
+    * @brief function envUnPause
+    * @param none
+    * @return none
+    * calls gazebo unpause_physics service
+    */
     void envUnPause();
+
+   /**
+    * @brief function returnReward
+    * @param none
+    * @return reward int
+    * returns the reward
+    */
     int returnReward() { return reward;}
 };
