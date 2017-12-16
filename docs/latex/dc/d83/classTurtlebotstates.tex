@@ -1,0 +1,154 @@
+\hypertarget{classTurtlebotstates}{}\section{Turtlebotstates Class Reference}
+\label{classTurtlebotstates}\index{Turtlebotstates@{Turtlebotstates}}
+
+
+Class \hyperlink{classTurtlebotstates}{Turtlebotstates} The following class provides functions for read laserscan topic and identifying possibility of turtlebot collision with environment.  
+
+
+
+
+{\ttfamily \#include $<$Turtlebotstates.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTurtlebotstates_a4dca61868c5ae3ea477e3305700d9ad9}{Turtlebotstates} ()
+\begin{DoxyCompactList}\small\item\em constructor Turtlebotstate \end{DoxyCompactList}\item 
+\hyperlink{classTurtlebotstates_a30f6ce845491e7c8da05287d18e680b9}{$\sim$\+Turtlebotstates} ()
+\begin{DoxyCompactList}\small\item\em destructor \hyperlink{classTurtlebotstates}{Turtlebotstates} \end{DoxyCompactList}\item 
+void \hyperlink{classTurtlebotstates_a38af7c7caf90b3775fb12d8457320758}{call\+Depth} (const sensor\+\_\+msgs\+::\+Laser\+Scan\+::\+Const\+Ptr \&msg)
+\begin{DoxyCompactList}\small\item\em function call\+Depth \end{DoxyCompactList}\item 
+bool \hyperlink{classTurtlebotstates_a1413e295064f4cea1a93e6f2a7f32fb6}{collision\+Check} ()
+\begin{DoxyCompactList}\small\item\em function collision\+Check \end{DoxyCompactList}\item 
+void \hyperlink{classTurtlebotstates_ac9318249e69e0aa6cb1a4fee4ad8e5f9}{set\+Collision} ()
+\begin{DoxyCompactList}\small\item\em function set\+Collision \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \hyperlink{classTurtlebotstates_ab183a7c1858883449cf47996e0dd1ecd}{return\+Laser\+State} ()
+\begin{DoxyCompactList}\small\item\em function return\+Laser\+State \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class \hyperlink{classTurtlebotstates}{Turtlebotstates} The following class provides functions for read laserscan topic and identifying possibility of turtlebot collision with environment. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Turtlebotstates@{Turtlebotstates}!Turtlebotstates@{Turtlebotstates}}
+\index{Turtlebotstates@{Turtlebotstates}!Turtlebotstates@{Turtlebotstates}}
+\subsubsection[{\texorpdfstring{Turtlebotstates()}{Turtlebotstates()}}]{\setlength{\rightskip}{0pt plus 5cm}Turtlebotstates\+::\+Turtlebotstates (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classTurtlebotstates_a4dca61868c5ae3ea477e3305700d9ad9}{}\label{classTurtlebotstates_a4dca61868c5ae3ea477e3305700d9ad9}
+
+
+constructor Turtlebotstate 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none initializes values of collision status 
+\end{DoxyReturn}
+\index{Turtlebotstates@{Turtlebotstates}!````~Turtlebotstates@{$\sim$\+Turtlebotstates}}
+\index{````~Turtlebotstates@{$\sim$\+Turtlebotstates}!Turtlebotstates@{Turtlebotstates}}
+\subsubsection[{\texorpdfstring{$\sim$\+Turtlebotstates()}{~Turtlebotstates()}}]{\setlength{\rightskip}{0pt plus 5cm}Turtlebotstates\+::$\sim$\+Turtlebotstates (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classTurtlebotstates_a30f6ce845491e7c8da05287d18e680b9}{}\label{classTurtlebotstates_a30f6ce845491e7c8da05287d18e680b9}
+
+
+destructor \hyperlink{classTurtlebotstates}{Turtlebotstates} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none destroy the Depth\+Image object created 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\index{Turtlebotstates@{Turtlebotstates}!call\+Depth@{call\+Depth}}
+\index{call\+Depth@{call\+Depth}!Turtlebotstates@{Turtlebotstates}}
+\subsubsection[{\texorpdfstring{call\+Depth(const sensor\+\_\+msgs\+::\+Laser\+Scan\+::\+Const\+Ptr \&msg)}{callDepth(const sensor_msgs::LaserScan::ConstPtr &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void Turtlebotstates\+::call\+Depth (
+\begin{DoxyParamCaption}
+\item[{const sensor\+\_\+msgs\+::\+Laser\+Scan\+::\+Const\+Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classTurtlebotstates_a38af7c7caf90b3775fb12d8457320758}{}\label{classTurtlebotstates_a38af7c7caf90b3775fb12d8457320758}
+
+
+function call\+Depth 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & of type sensor\+\_\+msgs\+::\+Laser\+Scan \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none A call back function to read laserscan data to update collision status 
+\end{DoxyReturn}
+\index{Turtlebotstates@{Turtlebotstates}!collision\+Check@{collision\+Check}}
+\index{collision\+Check@{collision\+Check}!Turtlebotstates@{Turtlebotstates}}
+\subsubsection[{\texorpdfstring{collision\+Check()}{collisionCheck()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Turtlebotstates\+::collision\+Check (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classTurtlebotstates_a1413e295064f4cea1a93e6f2a7f32fb6}{}\label{classTurtlebotstates_a1413e295064f4cea1a93e6f2a7f32fb6}
+
+
+function collision\+Check 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 for presence if obstacle and 0 for its absence Return the current value of collision\+Status 
+\end{DoxyReturn}
+\index{Turtlebotstates@{Turtlebotstates}!return\+Laser\+State@{return\+Laser\+State}}
+\index{return\+Laser\+State@{return\+Laser\+State}!Turtlebotstates@{Turtlebotstates}}
+\subsubsection[{\texorpdfstring{return\+Laser\+State()}{returnLaserState()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$int$>$ Turtlebotstates\+::return\+Laser\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classTurtlebotstates_ab183a7c1858883449cf47996e0dd1ecd}{}\label{classTurtlebotstates_ab183a7c1858883449cf47996e0dd1ecd}
+
+
+function return\+Laser\+State 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+state as std\+::vector Return the current state of the turtlebot 
+\end{DoxyReturn}
+\index{Turtlebotstates@{Turtlebotstates}!set\+Collision@{set\+Collision}}
+\index{set\+Collision@{set\+Collision}!Turtlebotstates@{Turtlebotstates}}
+\subsubsection[{\texorpdfstring{set\+Collision()}{setCollision()}}]{\setlength{\rightskip}{0pt plus 5cm}void Turtlebotstates\+::set\+Collision (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classTurtlebotstates_ac9318249e69e0aa6cb1a4fee4ad8e5f9}{}\label{classTurtlebotstates_ac9318249e69e0aa6cb1a4fee4ad8e5f9}
+
+
+function set\+Collision 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none sets values for collision\+Stat variable 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{Turtlebotstates_8hpp}{Turtlebotstates.\+hpp}\end{DoxyCompactItemize}

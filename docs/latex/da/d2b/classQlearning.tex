@@ -1,0 +1,264 @@
+\hypertarget{classQlearning}{}\section{Qlearning Class Reference}
+\label{classQlearning}\index{Qlearning@{Qlearning}}
+
+
+Class \hyperlink{classQlearning}{Qlearning} class to perform qlearning algorithm, store and load qtable.  
+
+
+
+
+{\ttfamily \#include $<$Qlearning.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classQlearning_a47decd46b0a181ccafbb0aba75ece448}{Qlearning} ()
+\begin{DoxyCompactList}\small\item\em constructor \hyperlink{classQlearning}{Qlearning} class \end{DoxyCompactList}\item 
+void \hyperlink{classQlearning_af55b20f8394ece2f46d461bc3badb955}{learnQ} (int state, int action, int reward, double val)
+\begin{DoxyCompactList}\small\item\em function learnQ \end{DoxyCompactList}\item 
+int \hyperlink{classQlearning_a67700ac6eebe8fa29c6fb187f332ef7d}{choose\+Action} (int index)
+\begin{DoxyCompactList}\small\item\em function choose\+Action \end{DoxyCompactList}\item 
+void \hyperlink{classQlearning_aab26b98bbad66dc95796efe6f437b06a}{learn} (int si, int act, int rew, int nsi)
+\begin{DoxyCompactList}\small\item\em function learn \end{DoxyCompactList}\item 
+double \hyperlink{classQlearning_a7f458df1e61c722831932e27dab625cc}{return\+Epsilon} ()
+\begin{DoxyCompactList}\small\item\em function return\+Epsilon \end{DoxyCompactList}\item 
+void \hyperlink{classQlearning_a6451b2b8c4ad90598dcff0bc993fc2dc}{set\+Epsilon} (double e)
+\begin{DoxyCompactList}\small\item\em function set\+Epsilon \end{DoxyCompactList}\item 
+void \hyperlink{classQlearning_ad8b2e2bcce19a6c91acb42d9c0fa0060}{store\+Qtable} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em function store\+Qtable \end{DoxyCompactList}\item 
+void \hyperlink{classQlearning_a4804470be726d6c54c02ef173dc7dea8}{load\+Qtable} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em function load\+Qtable \end{DoxyCompactList}\item 
+int \hyperlink{classQlearning_aa4520950688eea1e6e83175fa55839f0}{demo} (int index)
+\begin{DoxyCompactList}\small\item\em function demo \end{DoxyCompactList}\item 
+void \hyperlink{classQlearning_ac02b856b57c9e762c4efbefbc4968948}{test\+StoreQ} ()
+\begin{DoxyCompactList}\small\item\em function test\+StoreQ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class \hyperlink{classQlearning}{Qlearning} class to perform qlearning algorithm, store and load qtable. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Qlearning@{Qlearning}!Qlearning@{Qlearning}}
+\index{Qlearning@{Qlearning}!Qlearning@{Qlearning}}
+\subsubsection[{\texorpdfstring{Qlearning()}{Qlearning()}}]{\setlength{\rightskip}{0pt plus 5cm}Qlearning\+::\+Qlearning (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classQlearning_a47decd46b0a181ccafbb0aba75ece448}{}\label{classQlearning_a47decd46b0a181ccafbb0aba75ece448}
+
+
+constructor \hyperlink{classQlearning}{Qlearning} class 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none initializes values for q\+Table 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\index{Qlearning@{Qlearning}!choose\+Action@{choose\+Action}}
+\index{choose\+Action@{choose\+Action}!Qlearning@{Qlearning}}
+\subsubsection[{\texorpdfstring{choose\+Action(int index)}{chooseAction(int index)}}]{\setlength{\rightskip}{0pt plus 5cm}int Qlearning\+::choose\+Action (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{classQlearning_a67700ac6eebe8fa29c6fb187f332ef7d}{}\label{classQlearning_a67700ac6eebe8fa29c6fb187f332ef7d}
+
+
+function choose\+Action 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & as int \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+action as int selects the action to be performed based on the epsilon values and qtable 
+\end{DoxyReturn}
+\index{Qlearning@{Qlearning}!demo@{demo}}
+\index{demo@{demo}!Qlearning@{Qlearning}}
+\subsubsection[{\texorpdfstring{demo(int index)}{demo(int index)}}]{\setlength{\rightskip}{0pt plus 5cm}int Qlearning\+::demo (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{classQlearning_aa4520950688eea1e6e83175fa55839f0}{}\label{classQlearning_aa4520950688eea1e6e83175fa55839f0}
+
+
+function demo 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & as int \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+action as int return the best action for the state from the trained q\+Table 
+\end{DoxyReturn}
+\index{Qlearning@{Qlearning}!learn@{learn}}
+\index{learn@{learn}!Qlearning@{Qlearning}}
+\subsubsection[{\texorpdfstring{learn(int si, int act, int rew, int nsi)}{learn(int si, int act, int rew, int nsi)}}]{\setlength{\rightskip}{0pt plus 5cm}void Qlearning\+::learn (
+\begin{DoxyParamCaption}
+\item[{int}]{si, }
+\item[{int}]{act, }
+\item[{int}]{rew, }
+\item[{int}]{nsi}
+\end{DoxyParamCaption}
+)}\hypertarget{classQlearning_aab26b98bbad66dc95796efe6f437b06a}{}\label{classQlearning_aab26b98bbad66dc95796efe6f437b06a}
+
+
+function learn 
+
+
+\begin{DoxyParams}{Parameters}
+{\em si} & as int \\
+\hline
+{\em act} & as int \\
+\hline
+{\em rew} & as int \\
+\hline
+{\em nsi} & as int \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none identifys the max qvalue action of the next state 
+\end{DoxyReturn}
+\index{Qlearning@{Qlearning}!learnQ@{learnQ}}
+\index{learnQ@{learnQ}!Qlearning@{Qlearning}}
+\subsubsection[{\texorpdfstring{learn\+Q(int state, int action, int reward, double val)}{learnQ(int state, int action, int reward, double val)}}]{\setlength{\rightskip}{0pt plus 5cm}void Qlearning\+::learnQ (
+\begin{DoxyParamCaption}
+\item[{int}]{state, }
+\item[{int}]{action, }
+\item[{int}]{reward, }
+\item[{double}]{val}
+\end{DoxyParamCaption}
+)}\hypertarget{classQlearning_af55b20f8394ece2f46d461bc3badb955}{}\label{classQlearning_af55b20f8394ece2f46d461bc3badb955}
+
+
+function learnQ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & as int \\
+\hline
+{\em action} & as int \\
+\hline
+{\em reward} & as int \\
+\hline
+{\em val} & as double \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none updates qtable 
+\end{DoxyReturn}
+\index{Qlearning@{Qlearning}!load\+Qtable@{load\+Qtable}}
+\index{load\+Qtable@{load\+Qtable}!Qlearning@{Qlearning}}
+\subsubsection[{\texorpdfstring{load\+Qtable(std\+::string path)}{loadQtable(std::string path)}}]{\setlength{\rightskip}{0pt plus 5cm}void Qlearning\+::load\+Qtable (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{path}
+\end{DoxyParamCaption}
+)}\hypertarget{classQlearning_a4804470be726d6c54c02ef173dc7dea8}{}\label{classQlearning_a4804470be726d6c54c02ef173dc7dea8}
+
+
+function load\+Qtable 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & as std\+::string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none loads the qtable from path to the 2d vector q\+Table 
+\end{DoxyReturn}
+\index{Qlearning@{Qlearning}!return\+Epsilon@{return\+Epsilon}}
+\index{return\+Epsilon@{return\+Epsilon}!Qlearning@{Qlearning}}
+\subsubsection[{\texorpdfstring{return\+Epsilon()}{returnEpsilon()}}]{\setlength{\rightskip}{0pt plus 5cm}double Qlearning\+::return\+Epsilon (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classQlearning_a7f458df1e61c722831932e27dab625cc}{}\label{classQlearning_a7f458df1e61c722831932e27dab625cc}
+
+
+function return\+Epsilon 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+epsilon as double returns the current values of epsilon 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+107 \{\textcolor{keywordflow}{return} epsilon;\}
+\end{DoxyCode}
+\index{Qlearning@{Qlearning}!set\+Epsilon@{set\+Epsilon}}
+\index{set\+Epsilon@{set\+Epsilon}!Qlearning@{Qlearning}}
+\subsubsection[{\texorpdfstring{set\+Epsilon(double e)}{setEpsilon(double e)}}]{\setlength{\rightskip}{0pt plus 5cm}void Qlearning\+::set\+Epsilon (
+\begin{DoxyParamCaption}
+\item[{double}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classQlearning_a6451b2b8c4ad90598dcff0bc993fc2dc}{}\label{classQlearning_a6451b2b8c4ad90598dcff0bc993fc2dc}
+
+
+function set\+Epsilon 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & as double \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none sets a value for epsilon 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+115 \{epsilon = e; \}
+\end{DoxyCode}
+\index{Qlearning@{Qlearning}!store\+Qtable@{store\+Qtable}}
+\index{store\+Qtable@{store\+Qtable}!Qlearning@{Qlearning}}
+\subsubsection[{\texorpdfstring{store\+Qtable(std\+::string path)}{storeQtable(std::string path)}}]{\setlength{\rightskip}{0pt plus 5cm}void Qlearning\+::store\+Qtable (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{path}
+\end{DoxyParamCaption}
+)}\hypertarget{classQlearning_ad8b2e2bcce19a6c91acb42d9c0fa0060}{}\label{classQlearning_ad8b2e2bcce19a6c91acb42d9c0fa0060}
+
+
+function store\+Qtable 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & as std\+::string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none store the qtable to a .csv file 
+\end{DoxyReturn}
+\index{Qlearning@{Qlearning}!test\+StoreQ@{test\+StoreQ}}
+\index{test\+StoreQ@{test\+StoreQ}!Qlearning@{Qlearning}}
+\subsubsection[{\texorpdfstring{test\+Store\+Q()}{testStoreQ()}}]{\setlength{\rightskip}{0pt plus 5cm}void Qlearning\+::test\+StoreQ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classQlearning_ac02b856b57c9e762c4efbefbc4968948}{}\label{classQlearning_ac02b856b57c9e762c4efbefbc4968948}
+
+
+function test\+StoreQ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none function to aid testing of \hyperlink{classQlearning}{Qlearning} class 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{Qlearning_8hpp}{Qlearning.\+hpp}\end{DoxyCompactItemize}

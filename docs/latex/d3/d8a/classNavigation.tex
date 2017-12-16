@@ -1,0 +1,293 @@
+\hypertarget{classNavigation}{}\section{Navigation Class Reference}
+\label{classNavigation}\index{Navigation@{Navigation}}
+
+
+Class \hyperlink{classNavigation}{Navigation} class to publish velocity, find states index and corrdinate other classes.  
+
+
+
+
+{\ttfamily \#include $<$Navigation.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNavigation_a81fdffdefe46340da5fa6c570066b42b}{Navigation} ()
+\begin{DoxyCompactList}\small\item\em constructor \hyperlink{classNavigation}{Navigation} class \end{DoxyCompactList}\item 
+\hyperlink{classNavigation_addd4022d716df48f4e55a1db69361ba7}{$\sim$\+Navigation} ()
+\begin{DoxyCompactList}\small\item\em destructor \hyperlink{classNavigation}{Navigation} class \end{DoxyCompactList}\item 
+void \hyperlink{classNavigation_a9328ca0f132d8e87480e592a82687604}{move} ()
+\begin{DoxyCompactList}\small\item\em function move \end{DoxyCompactList}\item 
+void \hyperlink{classNavigation_abcd57a6d8649243a86a7f092f8217e78}{navmain} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em function navmain \end{DoxyCompactList}\item 
+void \hyperlink{classNavigation_ad019d5b5c0d97ce13310b7de38156c77}{navmain2} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em function navmain2 \end{DoxyCompactList}\item 
+int \hyperlink{classNavigation_a634f9154eaca95904c0804c572078721}{find\+State\+Index} (std\+::vector$<$ int $>$ state)
+\begin{DoxyCompactList}\small\item\em function findstate \end{DoxyCompactList}\item 
+void \hyperlink{classNavigation_af7b698c5d82b1a38e7562d013c9e5eec}{env\+Reset} ()
+\begin{DoxyCompactList}\small\item\em function env\+Reset \end{DoxyCompactList}\item 
+void \hyperlink{classNavigation_a32c4be93621a8cb447f93d36fcde6189}{action} (int action, bool \&col\+Stat, int \&reward, int \&next\+State)
+\begin{DoxyCompactList}\small\item\em function action \end{DoxyCompactList}\item 
+void \hyperlink{classNavigation_a44be73dfe68e4d121a0d3eb42cbc721a}{demo\+Action} (int \hyperlink{classNavigation_a32c4be93621a8cb447f93d36fcde6189}{action})
+\begin{DoxyCompactList}\small\item\em function demp\+Action \end{DoxyCompactList}\item 
+void \hyperlink{classNavigation_add42c3f1fb12406a684ee58f3907677b}{env\+Pause} ()
+\begin{DoxyCompactList}\small\item\em function env\+Pause \end{DoxyCompactList}\item 
+void \hyperlink{classNavigation_a39c38b3779ab2da402d9dfcbcc1312b2}{env\+Un\+Pause} ()
+\begin{DoxyCompactList}\small\item\em function env\+Un\+Pause \end{DoxyCompactList}\item 
+int \hyperlink{classNavigation_a52d1f06fc78b601c4d726ee973c55c39}{return\+Reward} ()
+\begin{DoxyCompactList}\small\item\em function return\+Reward \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class \hyperlink{classNavigation}{Navigation} class to publish velocity, find states index and corrdinate other classes. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Navigation@{Navigation}!Navigation@{Navigation}}
+\index{Navigation@{Navigation}!Navigation@{Navigation}}
+\subsubsection[{\texorpdfstring{Navigation()}{Navigation()}}]{\setlength{\rightskip}{0pt plus 5cm}Navigation\+::\+Navigation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNavigation_a81fdffdefe46340da5fa6c570066b42b}{}\label{classNavigation_a81fdffdefe46340da5fa6c570066b42b}
+
+
+constructor \hyperlink{classNavigation}{Navigation} class 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none initializes values of linear and angular velocity for topic and initializes the publish and subscribe variables 
+\end{DoxyReturn}
+\index{Navigation@{Navigation}!````~Navigation@{$\sim$\+Navigation}}
+\index{````~Navigation@{$\sim$\+Navigation}!Navigation@{Navigation}}
+\subsubsection[{\texorpdfstring{$\sim$\+Navigation()}{~Navigation()}}]{\setlength{\rightskip}{0pt plus 5cm}Navigation\+::$\sim$\+Navigation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNavigation_addd4022d716df48f4e55a1db69361ba7}{}\label{classNavigation_addd4022d716df48f4e55a1db69361ba7}
+
+
+destructor \hyperlink{classNavigation}{Navigation} class 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none destroys the created \hyperlink{classNavigation}{Navigation} class object when object goes out of scope. 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\index{Navigation@{Navigation}!action@{action}}
+\index{action@{action}!Navigation@{Navigation}}
+\subsubsection[{\texorpdfstring{action(int action, bool \&col\+Stat, int \&reward, int \&next\+State)}{action(int action, bool &colStat, int &reward, int &nextState)}}]{\setlength{\rightskip}{0pt plus 5cm}void Navigation\+::action (
+\begin{DoxyParamCaption}
+\item[{int}]{action, }
+\item[{bool \&}]{col\+Stat, }
+\item[{int \&}]{reward, }
+\item[{int \&}]{next\+State}
+\end{DoxyParamCaption}
+)}\hypertarget{classNavigation_a32c4be93621a8cb447f93d36fcde6189}{}\label{classNavigation_a32c4be93621a8cb447f93d36fcde6189}
+
+
+function action 
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & int \\
+\hline
+{\em col\+Stat} & bool reference \\
+\hline
+{\em reward} & int reference \\
+\hline
+{\em next\+State} & int reference \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none publishes velocity based on the action 
+\end{DoxyReturn}
+\index{Navigation@{Navigation}!demo\+Action@{demo\+Action}}
+\index{demo\+Action@{demo\+Action}!Navigation@{Navigation}}
+\subsubsection[{\texorpdfstring{demo\+Action(int action)}{demoAction(int action)}}]{\setlength{\rightskip}{0pt plus 5cm}void Navigation\+::demo\+Action (
+\begin{DoxyParamCaption}
+\item[{int}]{action}
+\end{DoxyParamCaption}
+)}\hypertarget{classNavigation_a44be73dfe68e4d121a0d3eb42cbc721a}{}\label{classNavigation_a44be73dfe68e4d121a0d3eb42cbc721a}
+
+
+function demp\+Action 
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & int \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none publishes velocity based on qtable 
+\end{DoxyReturn}
+\index{Navigation@{Navigation}!env\+Pause@{env\+Pause}}
+\index{env\+Pause@{env\+Pause}!Navigation@{Navigation}}
+\subsubsection[{\texorpdfstring{env\+Pause()}{envPause()}}]{\setlength{\rightskip}{0pt plus 5cm}void Navigation\+::env\+Pause (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNavigation_add42c3f1fb12406a684ee58f3907677b}{}\label{classNavigation_add42c3f1fb12406a684ee58f3907677b}
+
+
+function env\+Pause 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none calls gazebo pause\+\_\+physics service 
+\end{DoxyReturn}
+\index{Navigation@{Navigation}!env\+Reset@{env\+Reset}}
+\index{env\+Reset@{env\+Reset}!Navigation@{Navigation}}
+\subsubsection[{\texorpdfstring{env\+Reset()}{envReset()}}]{\setlength{\rightskip}{0pt plus 5cm}void Navigation\+::env\+Reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNavigation_af7b698c5d82b1a38e7562d013c9e5eec}{}\label{classNavigation_af7b698c5d82b1a38e7562d013c9e5eec}
+
+
+function env\+Reset 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none resets gazebo world 
+\end{DoxyReturn}
+\index{Navigation@{Navigation}!env\+Un\+Pause@{env\+Un\+Pause}}
+\index{env\+Un\+Pause@{env\+Un\+Pause}!Navigation@{Navigation}}
+\subsubsection[{\texorpdfstring{env\+Un\+Pause()}{envUnPause()}}]{\setlength{\rightskip}{0pt plus 5cm}void Navigation\+::env\+Un\+Pause (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNavigation_a39c38b3779ab2da402d9dfcbcc1312b2}{}\label{classNavigation_a39c38b3779ab2da402d9dfcbcc1312b2}
+
+
+function env\+Un\+Pause 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none calls gazebo unpause\+\_\+physics service 
+\end{DoxyReturn}
+\index{Navigation@{Navigation}!find\+State\+Index@{find\+State\+Index}}
+\index{find\+State\+Index@{find\+State\+Index}!Navigation@{Navigation}}
+\subsubsection[{\texorpdfstring{find\+State\+Index(std\+::vector$<$ int $>$ state)}{findStateIndex(std::vector< int > state)}}]{\setlength{\rightskip}{0pt plus 5cm}int Navigation\+::find\+State\+Index (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ int $>$}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{classNavigation_a634f9154eaca95904c0804c572078721}{}\label{classNavigation_a634f9154eaca95904c0804c572078721}
+
+
+function findstate 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & std\+::vector$<$int$>$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+state\+Index int finds the corresponding vector index for a state in the q\+Table 
+\end{DoxyReturn}
+\index{Navigation@{Navigation}!move@{move}}
+\index{move@{move}!Navigation@{Navigation}}
+\subsubsection[{\texorpdfstring{move()}{move()}}]{\setlength{\rightskip}{0pt plus 5cm}void Navigation\+::move (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNavigation_a9328ca0f132d8e87480e592a82687604}{}\label{classNavigation_a9328ca0f132d8e87480e592a82687604}
+
+
+function move 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none provide velocity commands to the turtlebot according the presence and absence of obstacle. 
+\end{DoxyReturn}
+\index{Navigation@{Navigation}!navmain@{navmain}}
+\index{navmain@{navmain}!Navigation@{Navigation}}
+\subsubsection[{\texorpdfstring{navmain(std\+::string path)}{navmain(std::string path)}}]{\setlength{\rightskip}{0pt plus 5cm}void Navigation\+::navmain (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{path}
+\end{DoxyParamCaption}
+)}\hypertarget{classNavigation_abcd57a6d8649243a86a7f092f8217e78}{}\label{classNavigation_abcd57a6d8649243a86a7f092f8217e78}
+
+
+function navmain 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & std\+::string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none coordinates the training process, gets states, gets action and performs 
+\end{DoxyReturn}
+\index{Navigation@{Navigation}!navmain2@{navmain2}}
+\index{navmain2@{navmain2}!Navigation@{Navigation}}
+\subsubsection[{\texorpdfstring{navmain2(std\+::string path)}{navmain2(std::string path)}}]{\setlength{\rightskip}{0pt plus 5cm}void Navigation\+::navmain2 (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{path}
+\end{DoxyParamCaption}
+)}\hypertarget{classNavigation_ad019d5b5c0d97ce13310b7de38156c77}{}\label{classNavigation_ad019d5b5c0d97ce13310b7de38156c77}
+
+
+function navmain2 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & std\+::string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none runs the testing for trained qtable 
+\end{DoxyReturn}
+\index{Navigation@{Navigation}!return\+Reward@{return\+Reward}}
+\index{return\+Reward@{return\+Reward}!Navigation@{Navigation}}
+\subsubsection[{\texorpdfstring{return\+Reward()}{returnReward()}}]{\setlength{\rightskip}{0pt plus 5cm}int Navigation\+::return\+Reward (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classNavigation_a52d1f06fc78b601c4d726ee973c55c39}{}\label{classNavigation_a52d1f06fc78b601c4d726ee973c55c39}
+
+
+function return\+Reward 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reward int returns the reward 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+169 \{ \textcolor{keywordflow}{return} reward;\}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{Navigation_8hpp}{Navigation.\+hpp}\end{DoxyCompactItemize}
