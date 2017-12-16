@@ -17,16 +17,16 @@ This project will implement a Qlerning algorithm for training a turtlebot to nav
 The presentation is available at
 https://docs.google.com/a/terpmail.umd.edu/presentation/d/1lY7BPjBClKzbS0OSACnfaRXx3JjSwh2sVAP6EU-dcpY/edit?usp=sharing
 
-Full video:
+Full video (Presentation + Installation + Demostration of training and testing):
 https://www.youtube.com/watch?v=qiqZj9iZp64
 
-Presentation:
+
+The full video has been split into presentation and demonstration:
+
+Presentation part alone can be viewed here:
 https://www.youtube.com/watch?v=k43GkDqWK9E
 
-Installation:
-https://youtu.be/rTx-yvGg248
-
-Demonstration video:
+Demonstration part can be viewed here:
 https://www.youtube.com/watch?v=CnOc-quSAEc
 
 ## SIP
@@ -73,7 +73,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
 THE POSSIBILITY OF SUCH DAMAGE.
 
 ```
-## Run
+## How to Build
 Follow the following steps to build the package
 ```
 cd mkdir -p ~/catkin_ws/src
@@ -91,15 +91,33 @@ To run test
 ```
 cd ~/catkin_ws/
 catkin_make run_tests
-rosrun qlearning qlearntest.launch
+rostest qlearning qlearntest.launch
 ```
 ## Running Demo
 To run the demo
 ```
 cd ~/catkin_ws/
 source devel/setup.bash
-rosrun qlearning qlearn.launch
+roslaunch qlearning qlearn.launch
 ```
+Gazebo opens up and terminal provides two options:
+1. Train Qtable
+2. Test Qtable
+
+Please present 1 and click enter if you want to train.
+The programs will ask you to enter the full path of the .csv file you want to store
+the final qtable. If the .csv file doesnt exist it will be created or else it will be overwritten.
+
+Now the gazebo simulation will show the turtlebot trying to navigate. The terminal will show
+the episode count, cumulative reward and current epsilon value.
+Please press ctrl + c to exit from training, the qtable (.csv) file will be saved automatically at the location you specified.
+
+Now rerun the program and select 2 and press enter for testing the trained qtable.
+The program will ask you to specify the full path of the trained qtable(.csv) file.
+There are two files in this package namely "god_259.csv" and "god_1451.csv" (both available in the qtable folder). The numbers in the file names indicate the number of episodes they have been trained (higher the better). Enter the
+full path of the "god_1451.csv" file and press enter. The turtlebot should navigate without colliding
+and complete the maze. Press ctrl + c to exit.
+
 Please follow the video for running the demo and installation of package.
 
 ## Record Rosbag
@@ -117,6 +135,17 @@ open another terminal and type
 cd ~/catkin_ws/src/QLearning-ENPM808X/results
 rosbag play roombatopics.bag
 ```
+
+## Doxygen
+To install Doxygen
+```
+sudo apt install doxygen
+```
+once the installation is over we can generate the Doxygen documentation by running
+```
+doxygen ./Doxygen
+```
+
 ## Dependencies
 ROS Kinetic
 Gazebo 7.9
@@ -126,16 +155,28 @@ Catkin
 
 And created using C++ on a Ubuntu 16.04 LTS machine.
 
-More information to be added soon.
 
 ## Known Issues/bugs
 As evident from the demo program, the maze requires the turtlebot to take only left turns. The sensor on board the turtlebot has a range of about 60 degrees. This software divides the laserscan range into 4 and uses it as the state for the Q-learning algorithm. Since the sensors visibility is towards the front the algorithm does not train well when trained in environments with both left and right turns. 
 This is not a deficiency in the algorithm but in the sensor. 
 A modification to a sensor with a higher angular range such as Hokuyo would solve the isse.
 
-Sometimes the path entry for qtable during the testing doesnt work. Please fill in the full path in the pragram (qlearning class->loadQtable function instead of path)
+Sometimes the path entry for qtable during the testing doesnt work (It happens when the computer is underheavy load, for me it happens while running the program while rendering video files). Please fill in the full path in the program (qlearning class->loadQtable function instead of "path" variable)
 
-
+## Coverage
+Install lcov
+```
+sudo apt-get install lcov
+```
+To check coverage:
+```
+cd ~/catkin_ws/build
+lcov --directory . --capture --output-file coverage.info
+lcov --remove coverage.info '/opt/*' '/usr/*' '*/devel/*' '*test_*' '*_test*' --output-file coverage.info
+lcov --list coverage.info
+```
+The coverage output is given as a screenshot in the results folder.
+It gave a coverage of 95.9%.
 
 ## About Me
 
