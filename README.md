@@ -55,21 +55,53 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
 THE POSSIBILITY OF SUCH DAMAGE.
 
 ```
-## Operation
-coming soon.
-
 ## Run
-coming soon.
+Follow the following steps to build the package
+```
+cd mkdir -p ~/catkin_ws/src
+cd ~/catkin_ws/
+catkin_make
+source devel/setup.bash
+cd src
+git clone https://github.com/senthilarul/QLearning-ENPM808X.git
+cd ..
+catkin_make
+```
 
 ## Test
-coming soon.
-
+To run test
+```
+cd ~/catkin_ws/
+catkin_make run_tests
+rosrun qlearning qlearntest.launch
+```
 ## Running Demo
-coming soon.
+To run the demo
+```
+cd ~/catkin_ws/
+source devel/setup.bash
+rosrun qlearning qlearn.launch
+```
+Please follow the video for running the demo and installation of package.
 
+## Record Rosbag
+```
+cd ~/catkin_ws
+source devel/setup.bash
+roslaunch qlearning qlearn.launch rosbagEnable:=true
+```
+For playing the bag file open a new terminal and type
+```
+roscore
+```
+open another terminal and type
+```
+cd ~/catkin_ws/src/QLearning-ENPM808X/results
+rosbag play roombatopics.bag
+```
 ## Dependencies
 ROS Kinetic
-Gazebo
+Gazebo 7.9
 turtlebot_gazebo package
 RViz
 Catkin
@@ -81,8 +113,7 @@ More information to be added soon.
 ## Known Issues/bugs
 coming soon.
 
-## API and other documentation
-coming soon.
+
 
 ## About Me
 
