@@ -17,6 +17,9 @@ This project will implement a Qlerning algorithm for training a turtlebot to nav
 The presentation is available at
 https://docs.google.com/a/terpmail.umd.edu/presentation/d/1lY7BPjBClKzbS0OSACnfaRXx3JjSwh2sVAP6EU-dcpY/edit?usp=sharing
 
+Full video:
+https://www.youtube.com/watch?v=qiqZj9iZp64
+
 Presentation:
 https://www.youtube.com/watch?v=k43GkDqWK9E
 
